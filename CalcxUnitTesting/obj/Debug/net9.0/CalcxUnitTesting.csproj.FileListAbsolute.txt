@@ -1,0 +1,11 @@
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\bin\Debug\net9.0\CalcxUnitTesting.deps.json
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\bin\Debug\net9.0\CalcxUnitTesting.dll
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\bin\Debug\net9.0\CalcxUnitTesting.pdb
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.AssemblyInfoInputs.cache
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.AssemblyInfo.cs
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.csproj.CoreCompileInputs.cache
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.dll
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\refint\CalcxUnitTesting.dll
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.pdb
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\ref\CalcxUnitTesting.dll
