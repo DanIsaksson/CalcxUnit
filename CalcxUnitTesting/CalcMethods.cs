@@ -57,28 +57,40 @@ public class CalcEval
 
           bool enterNum1 = true;
           // ENTER NUMBER INPUT 1
+          // Write xUnit test in UnitTest1.cs for this section
           while (enterNum1)
           {
                try
                {
-               var input = Console.ReadLine();
-               if (!double.TryParse(Console.ReadLine(), out num1))
+                    var input = Console.ReadLine();
+                    if (!double.TryParse(input, out num1))
+                    {
+                         throw new FormatException("Not a number. Enter a new number.");
+                    }
+               }
+               catch (FormatException ex)
                {
-                    Console.WriteLine("Invalid number. Please enter a number.");
+                    Console.WriteLine(ex.Message);
+                    Evaluate();
                }
-               }
-               else
-               {
-                    enterNum1 = false;
-               }
+               enterNum1 = false;
           }
 
+          //string calcOperator = ' ';
           char calcOperator = ' ';
+          
           bool isOperatorValid = false;
           // ENSURE PROPER OPERATOR IS ENTERED
           while (!isOperatorValid)
           {
-               calcOperator = Console.ReadLine()[0];
+               string operatorInput = Console.ReadLine();
+               
+               if (string.IsNullOrWhiteSpace(operatorInput))
+               {
+                    Console.WriteLine("No operator entered—please type +, -, *, or /");
+                    continue; // skip the rest of the iteration and go backto the top of the loop again
+               }
+               calcOperator = operatorInput.Trim()[0];
 
                switch (calcOperator)
                {
@@ -89,7 +101,8 @@ public class CalcEval
                          isOperatorValid = true;
                          break;
                     default:
-                         Console.WriteLine("\nInvalid operator. Please enter +, -, *, or /\nRe-enter here: ");
+                         Console.WriteLine("\nInvalid operator. Please enter +, -, *, or /\n");
+                         Console.Write("Re-enter operator here: ");
                          break;
                }
           }

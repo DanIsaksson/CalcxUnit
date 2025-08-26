@@ -9,3 +9,7 @@ F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\Ca
 F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\refint\CalcxUnitTesting.dll
 F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.pdb
 F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\ref\CalcxUnitTesting.dll
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.sourcelink.json
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\bin\Debug\net9.0\CalcxUnitTesting.exe
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\bin\Debug\net9.0\CalcxUnitTesting.runtimeconfig.json
+F:\Code-Projects\00-Study-00\Lexicon\Weeks\Week 9\Assignment\CalcxUnitTesting\CalcxUnitTesting\obj\Debug\net9.0\CalcxUnitTesting.genruntimeconfig.cache

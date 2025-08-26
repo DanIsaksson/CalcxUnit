@@ -5,11 +5,20 @@ namespace Calculator.Tests;
 
 public class CalcMethodTests
 {
+    // Check for really large numbers [Fact]
+    // Addition and Multiplication
+
+    // Add test for checking if input loop for charOperator works depending on input
+
+    // Line 61: xUnit test with try, catch for numeric input, write [Fact]
+
+    // [Theory] test somewhere..? For the switch statement! Assign test data for operator 1, 2, 3, 4 etc.
+
     [Fact]
     public void Division_ValidNumbers_ReturnsCorrectResult()
     {
         // Sets up two testing variables I can use to test the logic in line 17+18.
-        double dividend = 10; // THe number we divide
+        double dividend = 10; // The number we divide
         double divisor = 2; // The number we divide by
 
         double expected = 5;
