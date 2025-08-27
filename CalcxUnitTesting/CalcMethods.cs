@@ -42,6 +42,19 @@ public static class CalcMethods
           return divNum1 / divNum2;
      }
 
+     // New helper – single place for operator → method mapping
+     public static double ApplyOperator(char op, double a, double b)
+     {
+          return op switch
+          {
+               '+' => Add(a, b),
+               '-' => Subtraction(a, b),
+               '*' => Multiplication(a, b),
+               '/' => Division(a, b),   // Division throws if b == 0 – good!
+               _   => throw new ArgumentException($"Operator {op} not supported")
+          };
+     }
+
 }
 
 
@@ -122,23 +135,7 @@ public class CalcEval
           }
 
           //PICKS METHOD BASED ON OPERATOR PARSED FROM ABOVE
-          switch (calcOperator)
-          {
-               case '+':
-                    result = CalcMethods.Add(num1, num2);
-                    break;
-               case '-':
-                    result = CalcMethods.Subtraction(num1, num2);
-                    break;
-               case '*':
-                    result = CalcMethods.Multiplication(num1, num2);
-                    break;
-               case '/':
-                    result = CalcMethods.SafeDivision(num1, num2);
-                    break;
-               default:
-                    break;
-          }
+          result = CalcMethods.ApplyOperator(calcOperator, num1, num2);
 
           Console.WriteLine("\nResult: " + result + "\n");
 

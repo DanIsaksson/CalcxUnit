@@ -13,6 +13,30 @@ public class CalcMethodTests
     // Line 61: xUnit test with try, catch for numeric input, write [Fact]
 
     // [Theory] test somewhere..? For the switch statement! Assign test data for operator 1, 2, 3, 4 etc.
+    [Theory]
+    // Parameters: 1 = operator. 2 = num1. 3 = num2. 4 = expected result
+    // Every InlineData row is a new test with new parameter values for the method test
+    [InlineData('+', 3, 2, 5)]
+    [InlineData('-', 3, 2, 1)]
+    [InlineData('*', 3, 2, 6)]
+    [InlineData('/', 6, 2, 3)]
+    // The method applies InlineData-values across its parameters
+    public void Operator_MethodValidation(char oper, double num1, double num2, double expected)
+    {
+        // Applies parameter values to method for check
+        double actual = CalcMethods.ApplyOperator(oper, num1, num2);
+        // Check that we got what we wanted as we inserted in [3] of InlineData (5, 1, 6, 3)
+        Assert.Equal(expected, actual);
+    }
+
+    [Theory]
+    [InlineData('%')]
+    [InlineData('x')]
+    public void ApplyOperator_InvalidOperator_Throws(char oper)
+    {
+        Assert.Throws<ArgumentException>(() => CalcMethods.ApplyOperator(oper, 1, 1));
+    }
+
 
     [Fact]
     public void Division_ValidNumbers_ReturnsCorrectResult()
