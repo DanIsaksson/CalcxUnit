@@ -5,12 +5,12 @@ namespace Calculator.Tests;
 
 public class CalcMethodTests
 {
-    // Check for really large numbers [Fact]
-    // Addition and Multiplication
-
-    // Add test for checking if input loop for charOperator works depending on input
-
-    // Line 61: xUnit test with try, catch for numeric input, write [Fact]
+    // ==== IDEAS FOR TESTING ====
+    // - Check for really large numbers [Fact]
+    // - Addition and Multiplication
+    // - Add test for checking if input loop for charOperator works depending on input
+    // - Line 61: xUnit test with try, catch for numeric input, write [Fact]
+    // ===========================
 
     // [Theory] test somewhere..? For the switch statement! Assign test data for operator 1, 2, 3, 4 etc.
     [Theory]
@@ -30,11 +30,18 @@ public class CalcMethodTests
     }
 
     [Theory]
-    [InlineData('%')]
-    [InlineData('x')]
-    public void ApplyOperator_InvalidOperator_Throws(char oper)
+    // The 2 ones below SHOULD return TESTERROR, was result during last test.
+    [InlineData('%', "Operator % not supported, use /.")]
+    [InlineData('x', "Operator x not supported, use *.")]
+    // The 2 checks below should NOT return any TESTERROR
+    [InlineData('%', "Operator % not supported.")]
+    [InlineData('x', "Operator x not supported.")]
+    public void ApplyOperator_InvalidOperator_Throws(char oper, string expectedMessage)
     {
-        Assert.Throws<ArgumentException>(() => CalcMethods.ApplyOperator(oper, 1, 1));
+
+        var ex = Assert.Throws<ArgumentException>(() => CalcMethods.ApplyOperator(oper,1,1));
+        Assert.Equal(expectedMessage, ex.Message);
+        // Assert.Throws<ArgumentException>(() => CalcMethods.ApplyOperator(oper, 1, 1));
     }
 
 

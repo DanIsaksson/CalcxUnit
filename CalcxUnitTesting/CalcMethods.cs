@@ -45,13 +45,18 @@ public static class CalcMethods
      // New helper – single place for operator → method mapping
      public static double ApplyOperator(char op, double a, double b)
      {
+          // This is a switch expression. No need for cases. Each lambda expression maps
+          // a pattern, such as the op variable to a method (as seen below)
+          // a switch expression doesn't break out of a loop. So that's why  
           return op switch
           {
                '+' => Add(a, b),
                '-' => Subtraction(a, b),
                '*' => Multiplication(a, b),
                '/' => Division(a, b),   // Division throws if b == 0 – good!
-               _   => throw new ArgumentException($"Operator {op} not supported")
+               // I only have the _ as the "catch all" for an ArgumentException.
+               _   => throw new ArgumentException($"Operator {op} not supported.")
+          // close expression with ;
           };
      }
 
@@ -80,11 +85,12 @@ public class CalcEval
                     {
                          throw new FormatException("Not a number. Enter a new number.");
                     }
+                    enterNum1 = false;
                }
                catch (FormatException ex)
                {
                     Console.WriteLine(ex.Message);
-                    Evaluate();
+                    continue;
                }
                enterNum1 = false;
           }
@@ -96,7 +102,7 @@ public class CalcEval
           // ENSURE PROPER OPERATOR IS ENTERED
           while (!isOperatorValid)
           {
-               string operatorInput = Console.ReadLine();
+               string? operatorInput = Console.ReadLine();
                
                if (string.IsNullOrWhiteSpace(operatorInput))
                {
